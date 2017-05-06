@@ -23,7 +23,7 @@
 
     <flow:flow-registry id="mainFlowRegistry"
     flow-builder-services="flowBuilder">
-        <flow:flow-location id="main" path="/WEB-INF/flows/main-flow.xml"/>
+        <flow:flow-location id="home" path="/WEB-INF/flows/main-flow.xml"/>
     </flow:flow-registry>
 
 
