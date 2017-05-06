@@ -2,18 +2,36 @@ package ru.javabegin.training.springwebflow.objects;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+
 @Component
 public class UserService {
 
-    public String checkUser(User user) {
+	private ArrayList<User> userList = new ArrayList<User>();
 
-        if (user.getName() != null && user.getName().equals("user") &&
-                user.getPassword()!= null && user.getPassword().equals("pass")) {
-            return "success";
+	public UserService() {
+		userList.add(new User("user", "pass"));
+	}
+
+	public boolean userExist(User user) {
+
+		if (userList.contains(user)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public  String createUser(User user){
+        if (userExist(user)) {
+            return "exist";
         } else {
-
-            return "failed";
+            userList.add(user);
+            return "success";
         }
-
     }
+//
+//		userList.add(user);
+//	}
+
 }
