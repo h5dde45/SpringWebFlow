@@ -29,6 +29,5 @@
         </transition>
 
     </action-state>
-
     <view-state id="mainContent" view="main"/>
 </flow>
