@@ -17,12 +17,17 @@
 <form:form method="POST" modelAttribute="user"
            class="box login">
     <fieldset class="boxBody">
+
+        	<span style="float: right"> <a href="?lang=en"><spring:message code="en" /></a> <a
+                    href="?lang=ru"><spring:message code="ru" /></a>
+			</span>
+
         <form:label path="name">
-            Username
+            <spring:message code="username" />
         </form:label>
         <form:input path="name"/>
         <form:label path="password">
-            Password
+            <spring:message code="password" />
         </form:label>
         <form:password path="password"/>
 
@@ -34,9 +39,10 @@
     </fieldset>
 
     <footer>
-        <a href="${flowExecutionUrl}&_eventId=createUser">Create user</a>
+        <a href="${flowExecutionUrl}&_eventId=createUser">
+            <spring:message code="create_user" /></a>
         <input type="submit" class="btnLogin"
-               value="Login" name="_eventId_submit">
+               value="<spring:message code="login" />" name="_eventId_submit">
 
     </footer>
 </form:form>

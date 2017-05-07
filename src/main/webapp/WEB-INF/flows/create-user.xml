@@ -16,7 +16,7 @@
 
         <transition on="success" to="userCreated"/>
         <transition on="exist" to="createUserForm">
-            <set name="flashScope.message" value="'User exist...'"/>
+            <set name="flashScope.message" value="resourceBundle.user_exist"/>
         </transition>
 
     </action-state>

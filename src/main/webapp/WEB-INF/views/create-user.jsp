@@ -18,11 +18,11 @@
            class="box login">
     <fieldset class="boxBody">
         <form:label path="name">
-            Username
+            <spring:message code="username" />
         </form:label>
         <form:input path="name"/>
         <form:label path="password">
-            Password
+            <spring:message code="password" />
         </form:label>
         <form:password path="password"/>
 
@@ -34,10 +34,10 @@
     <footer>
 
         <input type="submit" class="btnLogin"
-               value="Cancel" name="_eventId_cancel">
+               value=" <spring:message code="cancel" />" name="_eventId_cancel">
 
         <input type="submit" class="btnLogin"
-               value="Create" name="_eventId_submit">
+               value="<spring:message code="create" />" name="_eventId_submit">
 
     </footer>
 </form:form>

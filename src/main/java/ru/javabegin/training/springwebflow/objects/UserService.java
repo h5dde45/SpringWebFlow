@@ -1,6 +1,7 @@
 package ru.javabegin.training.springwebflow.objects;
 
 import org.springframework.stereotype.Component;
+//import org.springframework.webflow.execution.RequestContext;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,8 @@ public class UserService {
     }
 
     public boolean userExist(User user) {
+
+//        System.out.println(context.getFlowScope().asMap());
 
         if (userList.contains(user)) {
             return true;
