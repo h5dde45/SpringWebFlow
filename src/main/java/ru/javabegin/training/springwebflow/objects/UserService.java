@@ -7,31 +7,36 @@ import java.util.ArrayList;
 @Component
 public class UserService {
 
-	private ArrayList<User> userList = new ArrayList<User>();
+    private ArrayList<User> userList = new ArrayList<User>();
 
-	public UserService() {
-		userList.add(new User("user", "pass"));
-	}
+    public UserService() {
+        userList.add(new User("user", "pass"));
+    }
 
-	public boolean userExist(User user) {
+    public boolean userExist(User user) {
 
-		if (userList.contains(user)) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+        if (userList.contains(user)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-	public  String createUser(User user){
-        if (userExist(user)) {
+    public String createUser(User user) {
+        if (userNameExist(user.getName())) {
             return "exist";
         } else {
             userList.add(user);
             return "success";
         }
     }
-//
-//		userList.add(user);
-//	}
+
+    public boolean userNameExist(String userName) {
+        for (User user : userList) {
+            if (user.getName().equals(userName))
+                return true;
+        }
+        return false;
+    }
 
 }

@@ -22,7 +22,8 @@
                                 view-factory-creator="flowViewResolver"/>
 
     <flow:flow-registry id="loginFlowRegistry"
-                        flow-builder-services="flowBuilder" base-path="/WEB-INF/flows">
+                        flow-builder-services="flowBuilder"
+                        base-path="/WEB-INF/flows">
         <flow:flow-location-pattern value="*.xml"/>
     </flow:flow-registry>
 

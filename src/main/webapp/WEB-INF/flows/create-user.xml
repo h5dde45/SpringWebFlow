@@ -15,7 +15,9 @@
         <evaluate expression="userService.createUser(user)"/>
 
         <transition on="success" to="userCreated"/>
-        <transition on="exist" to="createUserForm"/>
+        <transition on="exist" to="createUserForm">
+            <set name="flashScope.message" value="'User exist...'"/>
+        </transition>
 
     </action-state>
 
